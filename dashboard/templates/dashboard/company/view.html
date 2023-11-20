@@ -1,0 +1,64 @@
+{% extends 'base.html' %}	
+
+	{% block title %} Companies {% endblock title %}
+
+
+	{% block content %}
+		<p class="ml-5">Results: {{ result }}</p>
+
+		<div class="table-responsive">
+		  <table class="table table-striped table-bordered" id="myTable">
+		    <thead>
+		      <tr>
+		        <th>Company</th>
+		        <th>User</th>
+		        <th>Platform</th>
+		        <th>Budget</th>
+		        <th>Status</th>
+		        <th>Launge</th>
+		        <th>Date</th>
+		        <th>Active</th>
+		        <!-- Add more columns as needed -->
+		      </tr>
+		    </thead>
+		    <tbody>
+		    	{% for company in page %}
+			      <tr>		       
+				    <td><a href="{% url 'dashboard:company' company.id %}">{{ company.name }}</a></td>
+				    <td>{{ company.user.email }}</td>
+				    <td>{{ company.ad.ad_type }}</td>
+				    <td>{{ company.ad.price }}$</td>
+				    {% if company.status %}
+				    	<td class="bg-success">{{ company.status }}</td>
+				    {% else %}
+				    	<td class="bg-danger">{{ company.status }}</td>
+				    {% endif %}
+				    <td>{{ company.launge }}</td>
+				    <td>{{ company.created_at }}</td>
+				    {% if company.active %}
+				    	<td class="bg-success">{{ company.active }}</td>
+				    {% else %}
+				    	<td class="bg-danger">{{ company.active }}</td>
+				    {% endif %}
+			      </tr>
+			    {% endfor %}
+		    </tbody>
+		  </table>
+		</div>
+
+		<div class="pagination">
+		    <span class="step-links">
+		        {% if page.has_previous %}
+		            <a href="?page={{ page.previous_page_number }}" class="btn btn-primary">previous</a>
+		        {% endif %}
+
+		        <span class="current-page">{{ page.number }}</span>
+
+		        {% if page.has_next %}
+		            <a href="?page={{ page.next_page_number }}" class="btn btn-primary">next</a>
+		        {% endif %}
+		    </span>
+		</div>
+
+	{% endblock content %}
+
