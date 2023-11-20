@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==3.2.23"
+django-crispy-forms = "==1.14.0"
+django-jazzmin = "==2.6.0"
+djangorestframework = "==3.14.0"
+whitenoise = "==6.5.0"
+django-cors-headers = "*"
+environs = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"

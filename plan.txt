@@ -1,0 +1,47 @@
+Register
+	-- email, first_name, last_name, password, telegram_username
+	-- password taklif qilish
+	-- tasdiqlash kodini kritish
+
+Login
+	-- email, password
+	-- agar ro'yxatdan o'tib tasdiqlamasa tasdiqlashini so'rashi kerak
+	-- parolni qayta tiklash
+
+Profile
+	-- view
+	-- update = email, first_name, last_name, password, telegram_username
+
+Dashboard (user)
+	-- View 
+		Status, Prlatforms, Budget, clicks, rate ...
+	-- update reklama
+
+Billing
+	-- kriptovalyuta orqali cartani olish
+
+
+Company
+	-- create
+		company_name, webite_url, location (bir nechta tanlash), launge
+
+		tanlash: Google, Facebook, Microsoft, Instagrma, Twitter
+		Budget: 30$, 40$, 50$
+
+		Ads setting:
+			Headline[3]=30, Description[2]=80, keywords=100[max]
+
+	-- update
+	-- delete
+
+Dashboard (admin)
+	-- login and update admin data
+	-- all view
+	-- reklamalarni active qilish va o'zgartirishi
+
+
+
+
+---- LOGS ---
+	slash error
+	10mingta user qo'shish

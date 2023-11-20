@@ -1,0 +1,7 @@
+Django==3.2.23
+djangorestframework==3.14.0
+django-crispy-forms==1.14.0
+django-jazzmin==2.6.0
+whitenoise==6.5.0
+environs
+django-cors-headers
