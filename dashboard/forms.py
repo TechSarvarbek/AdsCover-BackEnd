@@ -26,7 +26,7 @@ class AdminUpdateForm(forms.ModelForm):
 class UserUpdateForm(forms.ModelForm):
 	class Meta:
 		model = Users
-		fields = ['email','password','first_name','last_name','telegram_name','confirmation_code','active','block']
+		fields = ['email','password','first_name','last_name','telegram_name']
 		
 
 class CompanyForm(forms.ModelForm):
